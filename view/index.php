@@ -100,7 +100,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                             <td>Rp <?= number_format($row['harga'], 0, ',', '.') ?></td>
                             
                             <td>
-                                <img src="../photo/<?= $row['foto'] ?>" alt="Foto" class="img-fluid" style="max-height: 100px;">
+                                <img src="../photo/<?= $row['foto'] ?>?t=<?php echo time(); ?>" alt="Foto" class="img-fluid" style="max-height: 100px;">
                             </td>
                             <td>
                                 <a href="index.php?page=edit_barang&id_barang=<?= $row['id_barang'] ?>" class="btn btn-warning btn-sm" onclick="return confirm('Apakah anda yakin ingin meng edit data ini?')">Edit</a>
