@@ -88,7 +88,7 @@
         }
 
         .footer {
-            background-color: #00281C;
+            background-color: #01302A;
             padding: 20px 0;
             text-align: center;
             color: white;
