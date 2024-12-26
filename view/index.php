@@ -8,7 +8,6 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-
 // Ambil parameter halaman dari URL (default ke dashboard)
 $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 ?>
@@ -18,7 +17,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Sweet Litle Garden</title>
+    <title>Admin Sweet Little Garden</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -46,8 +45,8 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 <body>
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
-        <nav class="col-md-2 sidebar">
+        <!-- Sidebar untuk layar besar -->
+        <nav class="col-md-2 d-none d-md-block sidebar">
             <div class="p-4">
                 <h4>Admin Dashboard</h4>
                 <hr>
@@ -70,10 +69,40 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
             </div>
         </nav>
 
+        <!-- Sidebar untuk layar kecil -->
+        <nav class="d-md-none">
+            <button class="btn btn-primary m-2" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                <i class="fas fa-bars"></i> Menu
+            </button>
+            <div class="offcanvas offcanvas-start bg-dark text-white" id="mobileSidebar">
+                <div class="offcanvas-header">
+                    <h5>Admin Dashboard</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.php?page=tambah_barang"><i class="fas fa-box"></i> Tambah Barang</a>
+                        </li>
+                        <?php if ($_SESSION['posisi'] === 'owner'): ?>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.php?page=tambah_admin"><i class="fas fa-user-plus"></i> Tambah Admin</a>
+                            </li>
+                        <?php endif; ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../proses/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <!-- Main Content -->
         <main class="col-md-10 main-content">
             <?php
-            // Jika halaman bukan tambah_barang atau tambah_admin
             if ($page === 'dashboard'):
                 ?>
                 <h2>Daftar Barang</h2>
@@ -98,7 +127,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                             <td><?= $row['id_barang'] ?></td>
                             <td><?= $row['nama'] ?></td>
                             <td>Rp <?= number_format($row['harga'], 0, ',', '.') ?></td>
-                            
                             <td>
                                 <img src="../photo/<?= $row['foto'] ?>?t=<?php echo time(); ?>" alt="Foto" class="img-fluid" style="max-height: 100px;">
                             </td>
@@ -111,17 +139,12 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                     </tbody>
                 </table>
             <?php
-            // Halaman Tambah Barang
             elseif ($page === 'tambah_barang' && file_exists("tambah-barang.php")):
                 include "tambah-barang.php";
-            // Halaman Edit Barang
             elseif ($page === 'edit_barang' && file_exists("edit-barang.php")):
                 include "edit-barang.php";
-            
-            // Halaman Tambah Admin
             elseif ($page === 'tambah_admin' && $_SESSION['posisi'] === 'owner' && file_exists("tambah-admin.php")):
                 include "tambah-admin.php";
-            
             else:
                 echo "<h4>Halaman tidak ditemukan atau Anda tidak memiliki akses!</h4>";
             endif;
