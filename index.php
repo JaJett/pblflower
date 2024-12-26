@@ -13,7 +13,7 @@
             background-color: #FFC0D2; /* Warna background pink */
         }
         .navbar {
-            background-color: #00281C !important; /* Warna hijau untuk navbar */
+            background-color: #01302A !important; /* Warna hijau untuk navbar */
         }
         .navbar-toggler-icon {
             color: white;
