@@ -10,10 +10,10 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #FCD7E2; /* Warna background pink */
+            background-color: #FFC0D2; /* Warna background pink */
         }
         .navbar {
-            background-color: #00281C !important; /* Warna hijau untuk navbar */
+            background-color: #53806D !important; /* Warna hijau untuk navbar */
         }
         .navbar-toggler-icon {
             color: white;
