@@ -174,6 +174,9 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">' . htmlspecialchars($product['nama']) . '</h5>
                             <p class="text-muted">Rp ' . number_format($product['harga'], 2, ',', '.') . '</p>
+                            <a href="proses/order.php?foto=' . urlencode($product['foto']) . '&kode=' . urlencode($product['nama']) . '" class="btn btn-success">
+                                Order Now
+                            </a>
                         </div>
                     </div>
                 </div>
