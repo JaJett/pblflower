@@ -114,9 +114,6 @@
                         <a class="nav-link" href="shop-all.php">Shop All</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Occasions</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="proses/order.php">Contact</a>
                     </li>
                 </ul>
