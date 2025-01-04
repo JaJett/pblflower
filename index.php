@@ -86,14 +86,94 @@
             transform: scale(1.1); /* Membesar */
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
         }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .our-store h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #01302A;
+        }
+
+        .our-store p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .list-group-item {
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            border: none;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .list-group-item i {
+            color: #01302A; /* Ikon hijau gelap */
+            margin-right: 10px;
+        }
+
+        .btn-outline-success {
+            border-color: #28A745; /* Hijau */
+            color: #28A745;
+            transition: 0.3s ease;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #28A745; /* Hijau solid */
+            color: white;
+        }
+
 
         .footer {
             background-color: #01302A;
             padding: 20px 0;
             text-align: center;
             color: white;
-            
         }
+        .btn {
+        border-radius: 20px; /* Membuat tombol lebih bulat */
+        padding: 10px 20px;
+        display: flex; /* Gunakan flexbox untuk pengaturan konten tombol */
+        justify-content: center; /* Pusatkan teks secara horizontal */
+        align-items: center; /* Pusatkan teks secara vertikal */
+        text-align: center; /* Pusatkan teks jika ada teks panjang */
+        height: 50px; /* Konsistensi tinggi tombol */
+        font-weight: bold;
+        width: 100%; /* Tombol memenuhi lebar container */
+        font-size: 16px; /* Ukuran teks konsisten */
+        margin: 5px 0; /* Memberikan jarak vertikal antar tombol */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-primary {
+        background-color: #007BFF; /* Warna biru */
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05); /* Membesar saat hover */
+    }
+
+    .btn-success {
+        background-color: #28A745; /* Warna hijau */
+        border: none;
+    }
+
+    .btn-success:hover {
+        background-color: #1e7e34;
+        transform: scale(1.05); /* Membesar saat hover */
+    }
     </style>
 </head>
 <body>
@@ -113,9 +193,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="shop-all.php">Shop All</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Occasions</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="proses/order.php">Contact</a>
@@ -174,9 +251,12 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">' . htmlspecialchars($product['nama']) . '</h5>
                             <p class="text-muted">Rp ' . number_format($product['harga'], 2, ',', '.') . '</p>
+                            <div class="d-grid gap-2">
+                            <a href="detail-product.php?id_barang=' .urlencode($product['id_barang']) . '" class="btn btn-primary">Detail Produk</a>
                             <a href="proses/order.php?foto=' . urlencode($product['foto']) . '&kode=' . urlencode($product['nama']) . '" class="btn btn-success">
-                                Order Now
+                                Pesan Sekarang
                             </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -185,6 +265,35 @@
             ?>
         </div>
     </div>
+    <div id="about-us" class="py-5">
+    <!-- Bagian Hero dengan Gambar Latar Belakang -->
+    <div class="hero" style="position: relative; height: 80vh; background: url('photo-content/hero1.jpeg') no-repeat center center/cover;">
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);"></div>
+        <div class="container position-relative text-white text-center" style="z-index: 1; top: 50%; transform: translateY(-50%);">
+            <h1 class="display-4">Lorem ipsum dolor sit amet consectetur.</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur. Nunc tempus consequat senectus imperdiet est purus enim.</p>
+        </div>
+    </div>
+
+    <!-- Informasi Toko -->
+    <div class="our-store py-5">
+        <div class="container text-center">
+            <h3 class="mb-4">Our Store</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <p>
+                        <strong>Blossom Haven</strong><br>
+                        c/Floral 523<br>
+                        <strong>Monday:</strong> 9am - 5pm<br>
+                        <strong>Tuesday - Friday:</strong> 9am - 7pm<br>
+                        <strong>Saturday:</strong> 9am - 6pm<br>
+                        <strong>Sunday:</strong> Closed
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Footer -->
     <footer class="footer">
