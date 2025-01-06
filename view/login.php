@@ -12,7 +12,7 @@
 
     <style>
         body {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
+            background: linear-gradient(to right, #FFA4BF, #659892);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -66,7 +66,7 @@
 
 <body>
     <div class="login-card">
-        <h2 class="text-center mb-4">Welcome Back</h2>
+        <h2 class="text-center mb-4">Login Admin</h2>
         <form action="../proses/proses-login.php" method="POST">
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>

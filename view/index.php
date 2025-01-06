@@ -22,23 +22,44 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
         }
         .sidebar {
-            background-color: #343a40;
-            color: white;
+            background-color: #FFA4BF;
+            color: black;
             min-height: 100vh;
         }
+         .sidebar h4 {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
         .sidebar .nav-link {
-            color: white;
+            color: black;
             margin: 5px 0;
         }
         .sidebar .nav-link:hover {
-            background-color: #495057;
+            background-color: white;
             border-radius: 5px;
         }
         .main-content {
             padding: 20px;
+        }
+        .table th {
+            background-color: #ffa4bf;
+            color: #fff;
+            font-weight: bold;
+        }
+        .table {
+            background-color: #fff;
+            border: black   ;
+        }
+        .table td img {
+            max-height: 100px;
+            width: 40%;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -48,7 +69,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
         <!-- Sidebar untuk layar besar -->
         <nav class="col-md-2 d-none d-md-block sidebar">
             <div class="p-4">
-                <h4>Admin Dashboard</h4>
+                <h4>Admin</h4>
                 <hr>
                 <ul class="nav flex-column">
                     <li class="nav-item">
