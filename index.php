@@ -94,7 +94,17 @@
         .hero p {
             font-size: 1.2rem;
         }
-
+        .hero-1{
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('photo-content/hero1.jpeg') no-repeat center center/cover;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
         .our-store h3 {
             font-size: 2rem;
             font-weight: bold;
@@ -183,7 +193,8 @@
             <a class="navbar-brand" href="#">
                 <img src="photo-content/logo.jpeg" alt="Sweet Little Garden"> 
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -267,11 +278,14 @@
     </div>
     <div id="about-us" class="py-5">
     <!-- Bagian Hero dengan Gambar Latar Belakang -->
-    <div class="hero" style="position: relative; height: 80vh; background: url('photo-content/hero1.jpeg') no-repeat center center/cover;">
+    <div class="hero-1" style="position: relative; height: 80vh; background: url('photo-content/hero1.jpeg') no-repeat center center/cover;">
         <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);"></div>
         <div class="container position-relative text-white text-center" style="z-index: 1; top: 50%; transform: translateY(-50%);">
             <h1 class="display-4">Sweet Little Garden</h1>
-            <p class="lead">Buket handmade dengan sentuhan cinta sejak 2019, Temukan keindahan dalam setiap buket yang kami buat dengan sepenuh hati</p>
+            <br>
+            <p class="lead">
+            Sweet Little Garden adalah UMKM yang berdiri sejak tahun 2019, berfokus pada pembuatan buket bunga kreatif secara handmade. Kami percaya setiap buket memiliki cerita yang istimewa, dan kami berkomitmen untuk menghadirkan produk berkualitas dengan desain yang unik.
+            </p>
         </div>
     </div>
 
@@ -285,8 +299,8 @@
                         <strong>Sweet Little Garden</strong><br>
                         Jl. Agatis II No. 27 B, Sungai Miai Kec. Banjarmasin<br>
                         <strong>Monday:</strong> 08.00 - 17.00<br>
-                        <strong>Tuesday - Friday:</strong> 08.00 - 17.00<br>
-                        <strong>Saturday - Sunday</strong> 08.00 - 17.00<br>
+                        <strong>Tuesday - Friday:</strong> 08.30 - 17.00<br>
+                        <strong>Saturday - Sunday</strong> 09.00 - 17.00<br>
                         <a href="https://maps.app.goo.gl/vVJHenu4tyqVYVvH7" target="_blank" class="btn btn-outline-success mt-3">
                         <i class="bi bi-geo-alt-fill"></i> Find Us on Maps</a>
                     </p>

@@ -102,7 +102,8 @@
             <a class="navbar-brand" href="#">
                 <img src="photo-content/logo.jpeg" alt="Sweet Little Garden" height="50" width="50" class="rounded-circle">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -181,7 +182,8 @@
 
         <!-- Search Form -->
         <form method="post" class="mb-4 text-center">
-            <input type="text" name="search" class="form-control d-inline w-50" placeholder="Search products" value="<?= htmlspecialchars($_POST['search'] ?? '') ?>">
+            <input type="text" name="search" class="form-control d-inline w-50" placeholder="Search products" 
+            value="<?= htmlspecialchars($_POST['search'] ?? '') ?>">
         </form>
 
         <!-- Product Cards -->
@@ -205,13 +207,16 @@
                 echo '
                 <div class="col">
                     <div class="card product-card">
-                        <img src="photo/' . htmlspecialchars($product['foto']) . '" class="card-img-top" alt="' . htmlspecialchars($product['nama']) . '">
+                        <img src="photo/' . htmlspecialchars($product['foto']) . '" class="card-img-top" alt="' . 
+                        htmlspecialchars($product['nama']) . '">
                         <div class="card-body text-center">
                             <h5 class="card-title">' . htmlspecialchars($product['nama']) . '</h5>
                             <p class="text-muted">' . $kategoriName . '</p>
                             <p class="text-muted">Rp ' . number_format($product['harga'], 2, ',', '.') . '</p>
-                            <a href="detail-product.php?id_barang=' .urlencode($product['id_barang']) . '" class="btn btn-primary">Detail Produk</a>
-                            <a href="proses/order.php?foto=' . urlencode($product['foto']) . '&kode=' . urlencode($product['nama']) . '" class="btn btn-success">
+                            <a href="detail-product.php?id_barang=' .urlencode($product['id_barang']) . 
+                            '" class="btn btn-primary">Detail Produk</a>
+                            <a href="proses/order.php?foto=' . urlencode($product['foto']) . '&kode=' . 
+                            urlencode($product['nama']) . '" class="btn btn-success">
                                 Order Now
                             </a>
                         </div>
