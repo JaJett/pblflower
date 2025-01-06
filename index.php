@@ -270,8 +270,8 @@
     <div class="hero" style="position: relative; height: 80vh; background: url('photo-content/hero1.jpeg') no-repeat center center/cover;">
         <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);"></div>
         <div class="container position-relative text-white text-center" style="z-index: 1; top: 50%; transform: translateY(-50%);">
-            <h1 class="display-4">Lorem ipsum dolor sit amet consectetur.</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur. Nunc tempus consequat senectus imperdiet est purus enim.</p>
+            <h1 class="display-4">Sweet Little Garden</h1>
+            <p class="lead">Buket handmade dengan sentuhan cinta sejak 2019, Temukan keindahan dalam setiap buket yang kami buat dengan sepenuh hati</p>
         </div>
     </div>
 
@@ -282,12 +282,13 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <p>
-                        <strong>Blossom Haven</strong><br>
-                        c/Floral 523<br>
-                        <strong>Monday:</strong> 9am - 5pm<br>
-                        <strong>Tuesday - Friday:</strong> 9am - 7pm<br>
-                        <strong>Saturday:</strong> 9am - 6pm<br>
-                        <strong>Sunday:</strong> Closed
+                        <strong>Sweet Little Garden</strong><br>
+                        Jl. Agatis II No. 27 B, Sungai Miai Kec. Banjarmasin<br>
+                        <strong>Monday:</strong> 08.00 - 17.00<br>
+                        <strong>Tuesday - Friday:</strong> 08.00 - 17.00<br>
+                        <strong>Saturday - Sunday</strong> 08.00 - 17.00<br>
+                        <a href="https://maps.app.goo.gl/vVJHenu4tyqVYVvH7" target="_blank" class="btn btn-outline-success mt-3">
+                        <i class="bi bi-geo-alt-fill"></i> Find Us on Maps</a>
                     </p>
                 </div>
             </div>
