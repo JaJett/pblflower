@@ -10,11 +10,11 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #fef4f8;
+            background-color: #FFC0D2;
             padding-top: 70px;
         }
         .navbar {
-            background-color: #00281C !important;
+            background-color: #01302A !important;
         }
         .nav-link {
             color: white !important;
@@ -210,6 +210,7 @@
                             <h5 class="card-title">' . htmlspecialchars($product['nama']) . '</h5>
                             <p class="text-muted">' . $kategoriName . '</p>
                             <p class="text-muted">Rp ' . number_format($product['harga'], 2, ',', '.') . '</p>
+                            <a href="detail-product.php?id_barang=' .urlencode($product['id_barang']) . '" class="btn btn-primary">Detail Produk</a>
                             <a href="proses/order.php?foto=' . urlencode($product['foto']) . '&kode=' . urlencode($product['nama']) . '" class="btn btn-success">
                                 Order Now
                             </a>
