@@ -11,6 +11,7 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #FFC0D2; /* Warna background pink */
+            padding-top: 70px;
         }
         .navbar {
             background-color: #01302A !important; /* Warna hijau untuk navbar */
@@ -78,21 +79,20 @@
         }
 
         .product-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%; /* Membuat kartu menyesuaikan tinggi */
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .product-card:hover {
             transform: scale(1.1); /* Membesar */
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
         }
         .hero-1{
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('photo-content/hero1.jpeg') no-repeat center center/cover;
