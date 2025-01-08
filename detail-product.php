@@ -109,7 +109,8 @@ if (isset($_GET['id_barang'])) {
                 <h1><?= htmlspecialchars($product['nama']); ?></h1>
                 <p class="text-muted">Rp <?= number_format($product['harga'], 2, ',', '.'); ?></p>
                 <p><?= htmlspecialchars($product['ket']); ?></p>
-                <a href="proses/order.php?foto=<?= urlencode($product['foto']); ?>&kode=<?= urlencode($product['nama']); ?>" class="btn btn-custom">Order Now</a>
+                <a href="proses/order.php?foto=<?= urlencode($product['foto']); ?>&kode=<?= urlencode($product['nama']); ?>
+                " class="btn btn-custom">Order Now</a>
                 <a href="index.php" class="btn btn-custom">Kembali</a>
             </div>
         </div>
