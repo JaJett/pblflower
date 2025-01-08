@@ -88,7 +88,7 @@ if (isset($_GET['id_barang'])) {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="shop-all.php">Shop All</a></li>
                     <li class="nav-item"><a class="nav-link" href="proses/order.php">Contact</a></li>
                 </ul>
